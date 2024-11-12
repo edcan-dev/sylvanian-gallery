@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+
+  --lilac: #B687DD;
+  --very-dark-gray: #121212;
+  --dark-gray: #343434;
+
+}
+
+* {
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  color: var(--lilac);
+}
+
+
+h1 {
+  font-weight: 400;
+  font-size: 3em;
+}
+
+body {
+  background-color: var(--very-dark-gray);
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery {
+
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
+
+.gallery__grid {
+  
+  display: grid;
+
+  grid-template-columns: repeat(3, 300px);
+  column-gap: 50px;
+  justify-content: center;
+  row-gap: 50px;
+}
+
+
+
+.gallery__grid__item {
+  height: 300px;
+  display: flex;
+  position: relative;
+
+}
+
+.gallery__grid__item__img {
+
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+
+}
+
+.gallery__grid__item__span {
+  position: absolute;
+  background-color: #B687DD;
+  width: 100%;
+  color: #121212;
+  font-size: 1.5em;
+  font-weight: 600;
+  bottom: 0;
+  padding: .5em;
+  text-align: center;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+
+}
+
+
+/* 1100 Media Querie */
+
+@media (max-width: 1100px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+@media (max-width: 750px) {
+  .gallery__grid {
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+
